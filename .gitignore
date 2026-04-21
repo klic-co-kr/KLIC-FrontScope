@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Git worktrees
+.worktrees
+
+# Local automation / planning artifacts
+.sisyphus/
+
+# Playwright artifacts
+test-results/
+playwright-report/
+
+# Local packaged extension artifacts
+klic-tool/
+klic-tools/
+klic-tool.zip
+klic-tools.zip

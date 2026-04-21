@@ -1,0 +1,307 @@
+/**
+ * Screenshot Content Script Styles
+ *
+ * 스크린샷 관련 스타일
+ */
+
+/* 캡처 중 상태 */
+.klic-capturing,
+.klic-screenshot-capturing {
+  user-select: none !important;
+  pointer-events: auto !important;
+}
+
+/* 오버레이 */
+.klic-screenshot-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  z-index: 2147483647 !important;
+  cursor: crosshair !important;
+  pointer-events: none !important;
+}
+
+/* 선택된 영역 */
+.klic-screenshot-area-selected {
+  position: absolute !important;
+  border: 2px dashed #3b82f6 !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3) !important;
+  pointer-events: none !important;
+}
+
+/* 요소 하이라이트 */
+.klic-screenshot-element-highlight {
+  position: fixed !important;
+  border: 2px solid #3b82f6 !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+  pointer-events: none !important;
+  z-index: 2147483646 !important;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.1s ease !important;
+}
+
+/* 딤 처리된 화면 */
+.klic-screenshot-dimmed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  z-index: 2147483645 !important;
+  pointer-events: none !important;
+}
+
+/* 썸네일 스타일 */
+.klic-screenshot-thumbnail {
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.klic-screenshot-thumbnail:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.klic-thumbnail-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+  opacity: 0 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.klic-screenshot-thumbnail:hover .klic-thumbnail-overlay {
+  opacity: 1 !important;
+}
+
+/* 캡처 버튼 스타일 */
+.klic-capture-button {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.klic-capture-button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+.klic-capture-button-element {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+.klic-capture-button-area {
+  background-color: #10b981 !important;
+  color: white !important;
+}
+
+.klic-capture-button-full-page {
+  background-color: #8b5cf6 !important;
+  color: white !important;
+}
+
+/* 갤러리 스타일 */
+.klic-screenshot-gallery {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.klic-gallery-toolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.75rem 1rem !important;
+  background: white !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.klic-gallery-content {
+  flex: 1 !important;
+  overflow: auto !important;
+  padding: 1rem !important;
+}
+
+.klic-screenshot-list-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  padding: 0.75rem !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.klic-screenshot-list-item:hover {
+  background-color: #f9fafb !important;
+}
+
+/* 에디터 스타일 */
+.klic-screenshot-editor {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  background-color: #111827 !important;
+}
+
+.klic-editor-toolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.5rem 1rem !important;
+  background-color: #1f2937 !important;
+  border-bottom: 1px solid #374151 !important;
+}
+
+.klic-editor-canvas-container {
+  flex: 1 !important;
+  overflow: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: rgba(17, 24, 39, 0.5) !important;
+}
+
+.klic-editor-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.75rem 1rem !important;
+  background-color: #1f2937 !important;
+  border-top: 1px solid #374151 !important;
+}
+
+/* 설정 패널 스타일 */
+.klic-screenshot-settings {
+  padding: 1rem !important;
+}
+
+.klic-setting-group {
+  margin-bottom: 1.5rem !important;
+}
+
+.klic-setting-group h3 {
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.klic-setting-info {
+  padding: 1rem !important;
+  background-color: #eff6ff !important;
+  border-radius: 0.5rem !important;
+}
+
+/* 주석 스타일 */
+.klic-annotation-arrow {
+  /* 화살표 주석 스타일 */
+}
+
+.klic-annotation-text {
+  /* 텍스트 주석 스타일 */
+}
+
+.klic-annotation-shape {
+  /* 도형 주석 스타일 */
+}
+
+.klic-annotation-pen {
+  /* 펜 주석 스타일 */
+}
+
+.klic-annotation-selected {
+  outline: 2px dashed #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* 미리보기 스타일 */
+.klic-screenshot-preview {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  z-index: 2147483647 !important;
+  background: white !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  padding: 1rem !important;
+}
+
+/* 애니메이션 */
+@keyframes klic-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes klic-slide-up {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.klic-fade-in {
+  animation: klic-fade-in 0.2s ease !important;
+}
+
+.klic-slide-up {
+  animation: klic-slide-up 0.3s ease !important;
+}
+
+/* 로딩 스피너 */
+.klic-loading-spinner {
+  width: 1rem !important;
+  height: 1rem !important;
+  border: 2px solid currentColor !important;
+  border-top-color: transparent !important;
+  border-radius: 50% !important;
+  animation: klic-spin 0.6s linear infinite !important;
+}
+
+@keyframes klic-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+  .klic-capture-button {
+    padding: 0.375rem 0.75rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .klic-gallery-toolbar {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    align-items: stretch !important;
+  }
+
+  .klic-editor-toolbar {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+}

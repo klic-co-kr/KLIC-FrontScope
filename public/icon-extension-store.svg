@@ -1,0 +1,52 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F4C8C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A3566;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F4C8C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg-gradient)"/>
+
+  <!-- Inner container -->
+  <rect x="40" y="40" width="432" height="432" rx="64" fill="white" fill-opacity="0.05"/>
+
+  <!-- KLIC Text -->
+  <text x="256" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="140" font-weight="700" text-anchor="middle" fill="white">KLIC</text>
+  <text x="256" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="500" text-anchor="middle" fill="white" fill-opacity="0.8">Tool</text>
+
+  <!-- Tool icons grid (12 tools represented by dots) -->
+  <g opacity="0.9">
+    <!-- Row 1 -->
+    <circle cx="100" cy="160" r="8" fill="#10B981"/>
+    <circle cx="130" cy="160" r="8" fill="#3B82F6"/>
+    <circle cx="160" cy="160" r="8" fill="#8B5CF6"/>
+    <circle cx="190" cy="160" r="8" fill="#EC4899"/>
+    <circle cx="220" cy="160" r="8" fill="#F59E0B"/>
+
+    <circle cx="292" cy="160" r="8" fill="#10B981"/>
+    <circle cx="322" cy="160" r="8" fill="#3B82F6"/>
+    <circle cx="352" cy="160" r="8" fill="#8B5CF6"/>
+    <circle cx="382" cy="160" r="8" fill="#EC4899"/>
+    <circle cx="412" cy="160" r="8" fill="#14B8A6"/>
+
+    <!-- Row 2 -->
+    <circle cx="100" cy="190" r="8" fill="#F59E0B"/>
+    <circle cx="130" cy="190" r="8" fill="#14B8A6"/>
+    <circle cx="160" cy="190" r="8" fill="#10B981"/>
+    <circle cx="190" cy="190" r="8" fill="#3B82F6"/>
+    <circle cx="220" cy="190" r="8" fill="#8B5CF6"/>
+
+    <circle cx="292" cy="190" r="8" fill="#EC4899"/>
+    <circle cx="322" cy="190" r="8" fill="#F59E0B"/>
+    <circle cx="352" cy="190" r="8" fill="#14B8A6"/>
+    <circle cx="382" cy="190" r="8" fill="#10B981"/>
+    <circle cx="412" cy="190" r="8" fill="#3B82F6"/>
+  </g>
+</svg>

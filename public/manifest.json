@@ -1,0 +1,88 @@
+{
+    "manifest_version": 3,
+    "name": "__MSG_manifest_name__",
+    "version": "2.0.1",
+    "description": "__MSG_manifest_description__",
+    "default_locale": "en",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage",
+        "alarms",
+        "contextMenus",
+        "sidePanel",
+        "offscreen",
+        "downloads"
+        ,"debugger"
+    ],
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "host_permissions": [
+        "*://*.youtube.com/*",
+        "*://*.naver.com/*",
+        "*://*.blog.naver.com/*",
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "assets/background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "KLIC-FrontScope"
+    },
+    "commands": {
+        "tool-shortcut-slot-e": {
+            "description": "Trigger tool shortcut slot Ctrl+Shift+E"
+        },
+        "tool-shortcut-slot-s": {
+            "description": "Trigger tool shortcut slot Ctrl+Shift+S"
+        },
+        "tool-shortcut-slot-c": {
+            "description": "Trigger tool shortcut slot Ctrl+Shift+C"
+        },
+        "tool-shortcut-slot-i": {
+            "description": "Trigger tool shortcut slot Ctrl+Shift+I"
+        },
+        "tool-shortcut-slot-r": {
+            "description": "Trigger tool shortcut slot Ctrl+Shift+R"
+        },
+        "tool-shortcut-slot-g": {
+            "description": "Trigger tool shortcut slot Ctrl+Shift+G"
+        },
+        "tool-shortcut-slot-a": {
+            "description": "Trigger tool shortcut slot Ctrl+Shift+A"
+        },
+        "shortcut-deactivate-active-tool": {
+            "description": "Deactivate currently active tool"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png",
+        "512": "icons/icon512.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "sidepanel.html",
+                "theme-init.js",
+                "assets/*"
+            ],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "assets/content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

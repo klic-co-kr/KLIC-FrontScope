@@ -1,0 +1,40 @@
+/**
+ * Screenshot Message Actions
+ *
+ * 스크린샷 관련 메시지 액션 상수 정의
+ */
+
+export const SCREENSHOT_ACTIONS = {
+  CAPTURE: 'SCREENSHOT_CAPTURE',
+  SAVE: 'SCREENSHOT_SAVE',
+  ADD_ANNOTATION: 'SCREENSHOT_ADD_ANNOTATION',
+  REMOVE_ANNOTATION: 'SCREENSHOT_REMOVE_ANNOTATION',
+  GET_HISTORY: 'SCREENSHOT_GET_HISTORY',
+  CLEAR_HISTORY: 'SCREENSHOT_CLEAR_HISTORY',
+  DOWNLOAD: 'SCREENSHOT_DOWNLOAD',
+  COPY_TO_CLIPBOARD: 'SCREENSHOT_COPY_TO_CLIPBOARD',
+  START_SELECTION: 'SCREENSHOT_START_SELECTION',
+  CANCEL_SELECTION: 'SCREENSHOT_CANCEL_SELECTION',
+  START_CAPTURE: 'SCREENSHOT_START_CAPTURE',
+  CAPTURE_COMPLETE: 'SCREENSHOT_CAPTURE_COMPLETE',
+  // 추가 액션
+  CANCEL_CAPTURE: 'SCREENSHOT_CANCEL_CAPTURE',
+  SAVE_SCREENSHOT: 'SCREENSHOT_SAVE_SCREENSHOT',
+  CAPTURE_ERROR: 'SCREENSHOT_CAPTURE_ERROR',
+} as const;
+
+export type ScreenshotAction = typeof SCREENSHOT_ACTIONS[keyof typeof SCREENSHOT_ACTIONS];
+
+// Alias for compatibility
+export const SCREENSHOT_MESSAGE_ACTIONS = SCREENSHOT_ACTIONS;
+
+export interface ScreenshotMessage<T = unknown> {
+  action: ScreenshotAction | string;
+  data?: T;
+  timestamp?: number;
+  screenshot?: T;
+  mode?: string;
+  format?: string;
+  quality?: number;
+  enableAnnotations?: boolean;
+}

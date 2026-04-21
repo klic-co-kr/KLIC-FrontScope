@@ -1,0 +1,325 @@
+/**
+ * CSS Scan Styles
+ *
+ * CSS 스캔 관련 스타일
+ */
+
+/* 요소 하이라이트 */
+.${CSS_SCAN_CLASSES.HIGHLIGHTED} {
+  user-select: none !important;
+  pointer-events: auto !important;
+}
+
+.${CSS_SCAN_CLASSES.ELEMENT_HIGHLIGHT} {
+  position: fixed !important;
+  border: 2px solid #3b82f6 !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+  pointer-events: none !important;
+  z-index: 2147483647 !important;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.1s ease !important;
+}
+
+.${CSS_SCAN_CLASSES.AREA_SELECTED} {
+  outline: 2px dashed #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* 박스 모델 */
+.${CSS_SCAN_CLASSES.BOX_MODEL_OVERLAY} {
+  position: fixed !important;
+  z-index: 2147483646 !important;
+  pointer-events: none !important;
+}
+
+.${CSS_SCAN_CLASSES.BOX_MODEL_CONTENT} {
+  background: rgba(74, 222, 128, 0.3) !important;
+  border: 1px solid #4ade80 !important;
+}
+
+.${CSS_SCAN_CLASSES.BOX_MODEL_PADDING} {
+  background: rgba(96, 165, 250, 0.3) !important;
+  border: 1px solid #60a5fa !important;
+}
+
+.${CSS_SCAN_CLASSES.BOX_MODEL_BORDER} {
+  background: rgba(244, 114, 182, 0.3) !important;
+  border: 1px solid #f472b6 !important;
+}
+
+.${CSS_SCAN_CLASSES.BOX_MODEL_MARGIN} {
+  background: rgba(251, 191, 36, 0.3) !important;
+  border: 1px solid #fbbf24 !important;
+}
+
+/* 스타일 뷰어 */
+.${CSS_SCAN_CLASSES.STYLE_VIEWER} {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+.${CSS_SCAN_CLASSES.STYLE_PROPERTY} {
+  color: #3b82f6 !important;
+}
+
+.${CSS_SCAN_CLASSES.STYLE_VALUE} {
+  color: #6b7280 !important;
+}
+
+.${CSS_SCAN_CLASSES.STYLE_RULE} {
+  color: #059669 !important;
+}
+
+.${CSS_SCAN_CLASSES.STYLE_SELECTOR} {
+  color: #7c3aed !important;
+}
+
+/* 컬러 스와치 */
+.${CSS_SCAN_CLASSES.COLOR_PREVIEW} {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.${CSS_SCAN_CLASSES.COLOR_SWATCH} {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.25rem 0.5rem !important;
+  background: white !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.375rem !important;
+}
+
+/* 선택자 뷰어 */
+.${CSS_SCAN_CLASSES.SELECTOR_TAG} {
+  color: #059669 !important;
+}
+
+.${CSS_SCAN_CLASSES.SELECTOR_ID} {
+  color: #dc2626 !important;
+}
+
+.${CSS_SCAN_CLASSES.SELECTOR_CLASS} {
+  color: #2563eb !important;
+}
+
+.${CSS_SCAN_CLASSES.SELECTOR_ATTR} {
+  color: #9333ea !important;
+}
+
+.${CSS_SCAN_CLASSES.SELECTOR_PSEUDO} {
+  color: #7c3aed !important;
+}
+
+/* 비교 뷰 */
+.${CSS_SCAN_CLASSES.COMPARISON_VIEW} {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1rem !important;
+}
+
+.${CSS_SCAN_CLASSES.COMPARISON_DIFF} {
+  background: #fef2f2 !important;
+}
+
+.${CSS_SCAN_CLASSES.COMPARISON_SAME} {
+  background: #f0fdf4 !important;
+}
+
+/* 내보내기 */
+.${CSS_SCAN_CLASSES.EXPORT_PREVIEW} {
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+  border-radius: 0.5rem !important;
+  padding: 1rem !important;
+}
+
+.${CSS_SCAN_CLASSES.EXPORT_CODE} {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+  white-space: pre !important;
+  overflow-x: auto !important;
+}
+
+/* 검색 */
+.${CSS_SCAN_CLASSES.SEARCH_RESULTS} {
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+.${CSS_SCAN_CLASSES.SEARCH_HIGHLIGHT} {
+  background: #fef3c7 !important;
+  outline: 2px solid #f59e0b !important;
+  outline-offset: 2px !important;
+}
+
+/* 애니메이션 */
+.${CSS_SCAN_CLASSES.ANIMATED} {
+  animation: klic-pulse 2s infinite !important;
+}
+
+@keyframes klic-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.${CSS_SCAN_CLASSES.ANIMATION_TIMELINE} {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+/* 반응형 */
+.${CSS_SCAN_CLASSES.BREAKPOINT_INDICATOR} {
+  position: fixed !important;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  padding: 0.5rem 1rem !important;
+  background: #3b82f6 !important;
+  color: white !important;
+  border-radius: 2rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  z-index: 2147483647 !important;
+}
+
+.${CSS_SCAN_CLASSES.MEDIA_QUERY_BADGE} {
+  display: inline-block !important;
+  padding: 0.125rem 0.375rem !important;
+  background: #8b5cf6 !important;
+  color: white !important;
+  border-radius: 0.25rem !important;
+  font-size: 0.625rem !important;
+  font-weight: 500 !important;
+}
+
+/* 접근성 */
+.${CSS_SCAN_CLASSES.ACCESSIBILITY_INFO} {
+  background: #ecfdf5 !important;
+  border: 1px solid #10b981 !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem !important;
+}
+
+.${CSS_SCAN_CLASSES.CONTRAST_RATIO} {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  font-size: 0.75rem !important;
+}
+
+.${CSS_SCAN_CLASSES.CONTRAST_RATIO}::before {
+  content: '' !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+}
+
+.${CSS_SCAN_CLASSES.CONTRAST_RATIO}[data-pass='true']::before {
+  background: #10b981 !important;
+}
+
+.${CSS_SCAN_CLASSES.CONTRAST_RATIO}[data-pass='false']::before {
+  background: #ef4444 !important;
+}
+
+/* 테마 */
+.${CSS_SCAN_CLASSES.THEME_LIGHT} {
+  --klic-bg: #ffffff !important;
+  --klic-text: #1f2937 !important;
+  --klic-border: #e5e7eb !important;
+  --klic-hover: #f3f4f6 !important;
+}
+
+.${CSS_SCAN_CLASSES.THEME_DARK} {
+  --klic-bg: #1f2937 !important;
+  --klic-text: #f9fafb !important;
+  --klic-border: #374151 !important;
+  --klic-hover: #374151 !important;
+}
+
+/* 애니메이션 */
+@keyframes klic-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.klic-fade-in {
+  animation: klic-fade-in 0.2s ease !important;
+}
+
+@keyframes klic-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.klic-slide-in {
+  animation: klic-slide-in 0.3s ease !important;
+}
+
+/* 로딩 스피너 */
+.klic-loading-spinner {
+  width: 1rem !important;
+  height: 1rem !important;
+  border: 2px solid currentColor !important;
+  border-top-color: transparent !important;
+  border-radius: 50% !important;
+  animation: klic-spin 0.6s linear infinite !important;
+}
+
+@keyframes klic-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 툴팁 */
+.klic-tooltip {
+  position: absolute !important;
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 0.375rem !important;
+  font-size: 0.75rem !important;
+  white-space: nowrap !important;
+  z-index: 2147483647 !important;
+  pointer-events: none !important;
+}
+
+.klic-tooltip::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -4px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 4px solid transparent !important;
+  border-right: 4px solid transparent !important;
+  border-top: 4px solid #1f2937 !important;
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+  .${CSS_SCAN_CLASSES.COMPARISON_VIEW} {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -1,0 +1,134 @@
+/**
+ * Font Analyzer Content Script Styles
+ */
+
+/* Element Highlight */
+.font-analyzer-highlighted {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  cursor: crosshair !important;
+}
+
+/* Metrics Overlay */
+.font-analyzer-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  pointer-events: none !important;
+  z-index: 2147483646 !important;
+}
+
+/* Metrics Panel */
+.font-metrics-panel {
+  position: fixed !important;
+  top: 50% !important;
+  right: 20px !important;
+  transform: translateY(-50%) !important;
+  background: white !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+  font-size: 12px !important;
+  z-index: 2147483647 !important;
+  max-width: 280px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.font-metrics-panel h3 {
+  margin: 0 0 12px 0 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+/* Metrics Guide Lines */
+.guide-ascender,
+.guide-descender,
+.guide-cap-height,
+.guide-x-height {
+  position: absolute !important;
+  pointer-events: none !important;
+}
+
+/* Font Border */
+.font-analyzer-font-border {
+  border: 1px solid #ef4444 !important;
+}
+
+/* Font Badge */
+.font-badge {
+  position: absolute !important;
+  top: -8px !important;
+  right: -8px !important;
+  padding: 2px 6px !important;
+  background: #3b82f6 !important;
+  color: white !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  z-index: 2147483647 !important;
+}
+
+/* Loading State */
+.font-loading {
+  animation: pulse 1.5s ease-in-out infinite !important;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Loaded State */
+.font-loaded {
+  border-color: #22c55e !important;
+}
+
+/* Error State */
+.font-error {
+  border-color: #ef4444 !important;
+}
+
+/* Comparison View */
+.font-comparison-view {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  gap: 16px !important;
+  background: white !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  z-index: 2147483647 !important;
+}
+
+/* Diff Highlighting */
+.font-diff {
+  background: #fef3c7 !important;
+}
+
+.font-same {
+  background: #dcfce7 !important;
+}
+
+/* Theme: Dark */
+.font-analyzer-dark {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+.font-analyzer-dark .font-metrics-panel {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.font-analyzer-dark .font-comparison-view {
+  background: #1f2937 !important;
+}
