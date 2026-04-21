@@ -16,12 +16,6 @@
 
 ---
 
-<p align="center">
-  <img src="docs/images/screenshot-main.png" alt="KLIC-Tool Screenshot" width="720" />
-</p>
-
----
-
 ## Features
 
 <div align="center">
