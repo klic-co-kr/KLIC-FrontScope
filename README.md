@@ -1,6 +1,6 @@
 <div align="center">
 
-# KLIC-Tool
+# KLIC-FrontScope
 
 **Chrome Extension for Frontend Developers**
 
